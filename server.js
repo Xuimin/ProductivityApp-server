@@ -13,7 +13,8 @@ app.use(express.json())
 // mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`)
 
 // ONLINE DATABASE
-mongoose.connect(`mongodb+srv://xuimin:${DB_PASSWORD}@productivityapp.lxyzi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
+// mongoose.connect(`mongodb+srv://xuimin:${DB_PASSWORD}@productivityapp.lxyzi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://xuimin:${DB_PASSWORD}@cluster0.gt4rkae.mongodb.net/?retryWrites=true&w=majority`)
 mongoose.connection.once('open', () => console.log("Connected to MongoDB"))
 
 app.use(express.static('Public')) // http://localhost:5000/Public/imagename.jpg
